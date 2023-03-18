@@ -1,0 +1,180 @@
+<div class="cloud-section">
+  <div class="w-layout-grid cloud-grid">
+    <div
+      id="w-node-fc0d8218-b2b8-d5f1-9acd-b606387248be-06f085b6"
+      class="cloud-top-content"
+    >
+      <div>
+        <a id="back-button" href="#" class="back-button w-inline-block"
+          ><div>الرجوع</div>
+          <img
+            src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63b77bdc02e67e09391b7b9f_Arrow%20Left%20-%20green.svg"
+            loading="lazy"
+            alt=""
+        /></a>
+      </div>
+      <div>
+        <img
+          src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63b47c52c632658afeea5b95_Retm%20Logo.svg"
+          loading="lazy"
+          alt="نظام نقاط البيع رتم "
+        />
+      </div>
+    </div>
+    <div
+      id="w-node-_1c4e7e1e-72fd-7f73-3699-82414aa6e789-06f085b6"
+      class="cloud-creation"
+    >
+      <div class="cloud-creation-header">
+        <div class="cloud-creation-heading">
+          حجز <span class="text-span-30">رمز الخدمة</span>
+        </div>
+        <div class="paragraph-2">قم بإنشاء سحابتك عبر نظام رتم</div>
+      </div>
+      <div class="service-key-form w-form">
+        <form
+          id="email-form"
+          name="email-form"
+          data-name="Email Form"
+          method="post"
+          class="sevice-key-form-container"
+          aria-label="Email Form"
+        >
+          <label for="name" class="cloud-field-label">رمز الخدمة</label
+          ><input
+            type="text"
+            class="cloud-field w-input"
+            maxlength="256"
+            name="name"
+            data-name="Name"
+            placeholder="انشئ رمز الخدمة الخاص بك ( 4 حروف لاتينية )"
+            id="name"
+            [(ngModel)]="serviceCode"
+          />
+          <div class="url-field">
+            <div>
+              <span class="text-span-31">https://</span>
+              <span class="text-span-32"><strong>test</strong></span> .retm.sa
+            </div>
+            <img
+              loading="lazy"
+              src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/640bc1d42e2b161f8f0f54d9_Lock.svg"
+              alt=""
+            />
+          </div>
+          <div class="div-block-15">
+            <div>
+              رمز الخدمة هو ترميز فريد لا يجتمع اكثر من تاجر بنفس الرمز، غالبا
+              تحتاج الرمز عند تسجيل الدخول او الدعم الفني.<br /><br />اختر رمز
+              مكون من احرف انجليزية من 4 خانات او اكثر، بدون مسافات وارقام.
+            </div>
+          </div>
+         
+          <button
+            [disabled]="!serviceCode"
+            (click)="verifyCode()"
+            class="button w-inline-block"
+          >
+            <div>حجز رمز الخدمة</div>
+          </button>
+        </form>
+        <div
+          *ngIf="message && success"
+          class="w-form-done"
+          tabindex="-1"
+          role="region"
+          aria-label="Email Form success"
+        >
+          <div>{{ message }}</div>
+        </div>
+        <div
+          *ngIf="message && !success"
+          class="w-form-fail"
+          tabindex="-1"
+          role="region"
+          aria-label="Email Form failure"
+        >
+          <!-- <div>Oops! Something went wrong while submitting the form.</div> -->
+          <div>{{ message }}.</div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="w-node-fc0d8218-b2b8-d5f1-9acd-b606387248e0-06f085b6"
+      class="cloud-buttom-content"
+    >
+      <div>© 2023 RETM. All rights reserved.</div>
+      <div class="div-block-14">
+        <div>help@retm.sa.com</div>
+        <img
+          src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63c3164d1c21780caab46ca6_Mail%20Icon.svg"
+          loading="lazy"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="onboarding step-2">
+    <div class="onboarding-container">
+      <div class="progress-bar">
+        <div class="container-progress-bar">
+          <div class="onboarding-step done">
+            <div class="onboarding-text hide">1</div>
+            <img
+              src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63befc017a1cb446c1ffa5a6_Check%20Mark.svg"
+              loading="lazy"
+              alt=""
+              class="check-icon active"
+            />
+          </div>
+          <div class="onboarding-step in-progress">
+            <div class="onboarding-text">2</div>
+            <img
+              src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63befc017a1cb446c1ffa5a6_Check%20Mark.svg"
+              loading="lazy"
+              alt=""
+              class="check-icon"
+            />
+          </div>
+          <div class="onboarding-step default">
+            <div class="onboarding-text">3</div>
+            <img
+              src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63befc017a1cb446c1ffa5a6_Check%20Mark.svg"
+              loading="lazy"
+              alt=""
+              class="check-icon"
+            />
+          </div>
+          <div class="onboarding-step default">
+            <div class="onboarding-text">4</div>
+            <img
+              src="https://uploads-ssl.webflow.com/63b47a4f00ab98da785b4d1e/63befc017a1cb446c1ffa5a6_Check%20Mark.svg"
+              loading="lazy"
+              alt=""
+              class="check-icon"
+            />
+          </div>
+        </div>
+        <div class="progress-bar-line"></div>
+      </div>
+      <div class="steps">
+        <div class="step-container">
+          <div>شروط الإستخدام</div>
+          <div class="text-block-30">الموافقة على الشروط والأحكام</div>
+        </div>
+        <div class="step-container">
+          <div>حجز رمز الخدمة</div>
+          <div class="text-block-30">أنشئ رمز الخدمة الخاص بك</div>
+        </div>
+        <div class="step-container">
+          <div>صفحة التسجيل</div>
+          <div class="text-block-30">انشئ بيانات الدخول لمدير النظام</div>
+        </div>
+        <div class="step-container">
+          <div>الموجز الكامل</div>
+          <div class="text-block-30">تأكد من بياناتك واحجز</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
